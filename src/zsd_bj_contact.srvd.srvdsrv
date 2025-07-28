@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination of Contact BO'
+define service Zsd_bj_Contact {
+  expose zbj_p_contact;
+}

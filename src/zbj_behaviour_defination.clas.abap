@@ -1,0 +1,5 @@
+CLASS zbj_behaviour_defination DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zbj_i_contact.
+ENDCLASS.
+
+CLASS zbj_behaviour_defination IMPLEMENTATION.
+ENDCLASS.

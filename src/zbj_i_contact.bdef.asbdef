@@ -1,0 +1,15 @@
+unmanaged implementation in class zbj_i_saveSequence unique;
+strict ( 2 );
+
+define behavior for zbj_i_contact //alias <alias_name>
+implementation in class zbj_behaviour_defination unique
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) ContactId;
+}

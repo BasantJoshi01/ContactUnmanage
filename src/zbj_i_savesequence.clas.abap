@@ -1,0 +1,5 @@
+CLASS zbj_i_savesequence DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zbj_i_contact.
+ENDCLASS.
+
+CLASS zbj_i_savesequence IMPLEMENTATION.
+ENDCLASS.

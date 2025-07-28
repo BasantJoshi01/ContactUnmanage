@@ -1,0 +1,71 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Contact',
+  typeNamePlural: 'Contacts',
+  title: { type: #STANDARD, value: 'FirstName' },
+  description: { type: #STANDARD, value: 'LastName' }
+}
+@Search.searchable: true
+annotate view zbj_p_contact with {
+  @UI.facet: [
+    {
+      id: 'idContact',
+      purpose: #STANDARD,
+      position: 10,
+      label: 'Contact Details',
+      type: #IDENTIFICATION_REFERENCE
+    }
+  ]
+  @UI.hidden: true
+  ContactId;
+
+  @UI.lineItem: [ { position: 20, label: 'First Name' } ]
+  @UI.identification: [ { position: 20, label: 'First Name' } ]
+  FirstName;
+
+  @UI.lineItem: [ { position: 30, label: 'Middle Name' } ]
+  @UI.identification: [ { position: 30, label: 'Middle Name' } ]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.8
+  MiddleName;
+
+  @UI.lineItem: [ { position: 40, label: 'Last Name' } ]
+  @UI.identification: [ { position: 40, label: 'Last Name' } ]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.8
+  LastName;
+
+  @UI.lineItem: [ { position: 50, label: 'Gender' } ]
+  @UI.identification: [ { position: 50, label: 'Gender' } ]
+  Gender;
+
+  @UI.lineItem: [ { position: 60, label: 'Date Of Birth' } ]
+  @UI.identification: [ { position: 60, label: 'Date Of Birth' } ]
+  Dob;
+
+  @UI.lineItem: [ { position: 70, label: 'Age' } ]
+  @UI.identification: [ { position: 70, label: 'Age' } ]
+  Age;
+
+  @UI.lineItem: [ { position: 80, label: 'Telephone' } ]
+  @UI.identification: [ { position: 80, label: 'Telephone' } ]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.8
+  Telephone;
+
+  @UI.identification: [ { position: 90, label: 'Email' } ]
+  Email;
+
+  @UI.lineItem: [ { position: 100, label: 'Active' } ]
+  @UI.identification: [ { position: 100, label: 'Active' } ]
+  Active;
+
+  @UI.hidden: true
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+  @UI.hidden: true
+  LastChangedBy;
+  @UI.hidden: true
+  LastChangedAt;
+}
