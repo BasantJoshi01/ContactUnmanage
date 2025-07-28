@@ -5,22 +5,25 @@ CLASS zbj_cl_aux_contact DEFINITION
 
   PUBLIC SECTION.
 
-    " Get Instance Method
-
-    CLASS-METHODS : get_instance
-      RETURNING VALUE(ro_instance) TYPE REF TO zbj_cl_aux_contact.
-
-    TYPES : lwa_contact TYPE zbj_contact,
-            lt_contact  TYPE STANDARD TABLE OF zbj_contact,
-            lt_messages TYPE TABLE OF symsg.
-
-
-
+    " Contact Workae with action code and control.
     TYPES : BEGIN OF lty_contact_intx,
               contact_id  TYPE zbj_contact-contact_id,
               action_code TYPE c LENGTH 1,
               _intx       TYPE zbj_contact_intx,
             END OF lty_contact_intx.
+
+    TYPES : lwa_contact TYPE zbj_contact,
+            lt_contact  TYPE STANDARD TABLE OF zbj_contact,
+            lt_contactx TYPE TABLE OF lty_contact_intx,
+            lt_messages TYPE TABLE OF symsg.
+
+    " Get Instance Method
+
+    CLASS-METHODS : get_instance
+      RETURNING VALUE(ro_instance) TYPE REF TO zbj_cl_aux_contact.
+
+
+
 
     CONSTANTS : BEGIN OF ls_constants,
 
